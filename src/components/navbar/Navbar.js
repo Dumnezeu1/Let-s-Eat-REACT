@@ -1,22 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar">
-      <a href="index.html" className="navbar-brand">
+      <Link exact="true" to="/" className="navbar-brand">
         <span>Let's Eat</span>
-      </a>
+      </Link>
       <ul>
         <li>
-          <a href="index.html">Home</a>
+          <Link exact="true" to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <a href="about.html" id="aboutbtn">
+          <Link exact="true" to="/about" id="aboutbtn">
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contacts">Contact</a>
+          <Link exact="true" to="/contacts">
+            Contact
+          </Link>
         </li>
       </ul>
       <button className="navbar-toggler">

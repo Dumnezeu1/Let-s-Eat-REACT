@@ -4,7 +4,8 @@ import Slider from "./recomandation-slider/Slider";
 import Restaurants from "./restaurants-display/Restaurants";
 import Navbar from "./../navbar/Navbar";
 import Footer from "./footer/Footer";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import RestaurantsPages from "./RestaurantsPages";
 
 function MainPage() {
   const restaurants = [
@@ -30,12 +31,12 @@ function MainPage() {
       image: "brutaria.jpg",
       items: [
         {
-          name: "Pizza",
+          name: "ewq",
           description: "Blat, salam, sos, mozzarela",
           price: 23
         },
-        { name: "Spaghete", description: "Paste, sos", price: 223 },
-        { name: "Ciorba leguma", description: "Apa, legume", price: 13 }
+        { name: "dsa", description: "Paste, sos", price: 223 },
+        { name: "Ciorba fdasfas", description: "Apa, legume", price: 13 }
       ]
     },
     {
@@ -45,12 +46,12 @@ function MainPage() {
       image: "japanese.jpg",
       items: [
         {
-          name: "Pizza",
+          name: "vcxv",
           description: "Blat, salam, sos, mozzarela",
           price: 23
         },
-        { name: "Spaghete", description: "Paste, sos", price: 223 },
-        { name: "Ciorba leguma", description: "Apa, legume", price: 13 }
+        { name: "vcx", description: "Paste, sos", price: 223 },
+        { name: "gsdag fdgfd", description: "Apa, legume", price: 13 }
       ]
     },
     {
@@ -71,13 +72,34 @@ function MainPage() {
   ];
 
   return (
-    <div>
-      <Navbar />
-      <Logo />
-      <Slider restaurants={restaurants} />
-      <Restaurants restaurants={restaurants} />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route
+            exact
+            path={`/`}
+            render={props => (
+              <div>
+                <Logo />
+                <Slider restaurants={restaurants} />
+                <Restaurants restaurants={restaurants} />
+              </div>
+            )}
+          />
+
+          <Route
+            exact
+            path={`/restaurant/:id`}
+            render={props => (
+              <RestaurantsPages restaurants={restaurants} match={props.match} />
+            )}
+          />
+        </Switch>
+
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

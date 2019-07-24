@@ -401,6 +401,17 @@ body {
   margin: 0 auto;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
 .navbar {
   background-color: rgb(233, 232, 232);
   color: #fff;
@@ -911,7 +922,7 @@ body {
   border-bottom: 1px solid #cfcece;
 }
 
-.restaurant_body {
+.restaurant_body:last-child {
   margin-bottom: 50px;
 }
 
@@ -925,39 +936,9 @@ body {
   height: 250px;
 }
 
-.restaurant_natural {
-  background: url(../img/prim.jpg);
-  background-size: cover;
-  background-position: center;
-}
-.orezari {
-  background: url(../img/japanese.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.barbeque {
-  background: url(../img/bbq.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.La-rocca {
-  background: url(../img/pizzar.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.Cofetaria-NNM {
-  background: url(../img/cake.jpg);
-  background-size: cover;
-  background-position: center;
-}
-
-.Brutaria-paine {
-  background: url(../img/brutaria.jpg);
-  background-size: cover;
-  background-position: center;
+.details-background img {
+  height: 400px;
+  width: 100%;
 }
 
 .restaurant-info {
@@ -1075,7 +1056,7 @@ body {
   display: none;
 }
 
-.restaurant_food {
+.restaurant_food:first-child {
   margin-top: 30px;
   box-shadow: 1px 1px 14px 6px rgba(190, 186, 186, 0.75);
   background-color: rgb(242, 242, 243);
@@ -1105,10 +1086,6 @@ body {
   -moz-transform: scale(-1, 1);
   -webkit-transform: scale(-1, 1);
   transform: scale(-1, 1);
-}
-
-.sortim {
-  display: none;
 }
 
 .type-food {
@@ -1344,26 +1321,34 @@ body {
 
 .btn-remove {
   background: rgb(255, 0, 191);
-  border: none;
+  border: 1px solid black;
   font-size: 15px;
-  margin-left: 1px;
+  padding: 2px 5px;
+  width: 80px;
+  margin: 5px auto 0 auto;
 }
 
-.produs-pret {
-  width: 15%;
+.produse-cos p {
+  width: 120px;
   margin: 0 0 0 5px;
   padding-right: 15px;
 }
 
 .produs-cantitate {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 20px;
   width: 20%;
 }
 
+.quantity-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .item-info {
   display: none;
+  width: 200px;
 }
 
 .produs-info:hover .item-info {

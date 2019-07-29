@@ -412,6 +412,10 @@ input[type="number"] {
   -moz-appearance: textfield; /* Firefox */
 }
 
+.modalDisplay {
+  display: block !important;
+}
+
 .navbar {
   background-color: rgb(233, 232, 232);
   color: #fff;
@@ -584,13 +588,6 @@ input[type="number"] {
   cursor: default;
 }
 
-.sortimente-container {
-  border: 1px solid rgb(228, 220, 220);
-  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.12);
-  margin-bottom: 40px;
-  padding: 20px 0;
-}
-
 .sortimente-widget {
   display: flex;
   justify-content: center;
@@ -636,19 +633,24 @@ input[type="number"] {
 .search-box,
 .search-wrapper {
   position: relative;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .search-wrapper {
-  margin: 15px auto 15px auto;
-  width: 500px;
-  transition: ease-in-out 0.5s;
+  margin: 15px auto 40px auto;
+  width: 50%;
+  background: rgb(242, 242, 243);
+  padding: 16px;
+  border: 1px solid rgba(231, 223, 230, 0.925);
+  box-shadow: 0 2px 28px 0 rgba(231, 223, 230, 0.925);
 }
 
 .search-box {
+  text-align: center;
   border: 1px solid #ccc;
+  background-color: #fff;
   outline: 0;
-  border-radius: 15px;
+  border-radius: 0;
   justify-items: center;
   justify-content: center;
   margin: 0 auto;
@@ -907,12 +909,11 @@ input[type="number"] {
   padding: 10px 20px 0 0;
   font-size: 28px;
   font-weight: bold;
-  color: rgb(218, 32, 103);
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: rgb(218, 32, 103);
   text-decoration: none;
   cursor: pointer;
 }
@@ -1056,36 +1057,21 @@ input[type="number"] {
   display: none;
 }
 
-.restaurant_food:first-child {
+.restaurant_food {
   margin-top: 30px;
   box-shadow: 1px 1px 14px 6px rgba(190, 186, 186, 0.75);
   background-color: rgb(242, 242, 243);
   color: black;
 }
 
-.restaurant_food:nth-child(3) img {
-  width: 23px;
-  height: 23px;
-}
-
 .restaurant_food > h3 {
   padding: 25px 0;
   text-align: center;
-  cursor: copy;
   user-select: none;
 }
 
-.restaurant_food img {
-  padding: 0 10px;
-  font-weight: 900;
-  height: 30px;
-  width: 30px;
-}
-
-.restaurant_food img:nth-child(2) {
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  transform: scale(-1, 1);
+.food-container {
+  margin-bottom: 30px;
 }
 
 .type-food {
@@ -1319,15 +1305,6 @@ input[type="number"] {
   width: 30px;
 }
 
-.btn-remove {
-  background: rgb(255, 0, 191);
-  border: 1px solid black;
-  font-size: 15px;
-  padding: 2px 5px;
-  width: 80px;
-  margin: 5px auto 0 auto;
-}
-
 .produse-cos p {
   width: 120px;
   margin: 0 0 0 5px;
@@ -1344,6 +1321,15 @@ input[type="number"] {
 .quantity-container {
   display: flex;
   flex-direction: row;
+}
+
+.produs-cantitate > button {
+  background: rgb(223, 9, 109);
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 2px 5px;
+  width: 80px;
+  margin: 5px auto 0 auto;
 }
 
 .item-info {
@@ -1652,8 +1638,8 @@ input[type="number"] {
   }
 
   .search-wrapper {
-    width: auto;
     margin: 35px auto 0 auto;
+    width: 200px;
   }
 
   .search-box {

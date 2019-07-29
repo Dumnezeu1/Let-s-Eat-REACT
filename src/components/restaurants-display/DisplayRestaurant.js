@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 function DisplayRestaurant({ restaurants, search }) {
   let filteredRestaurants = restaurants.filter(restaurant => {
-    return restaurant.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+    return (
+      restaurant.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 ||
+      restaurant.sortiments.toLowerCase().indexOf(search.toLowerCase()) !== -1
+    );
   });
 
   function redirect(name) {
@@ -20,7 +23,7 @@ function DisplayRestaurant({ restaurants, search }) {
             className="restaurante-item rest-div"
           >
             <img
-              src={require(`./../../../img/${restaurant.image}`)}
+              src={require(`./../../img/${restaurant.image}`)}
               alt={restaurant.name}
             />
             <h2 className="rest-name">{restaurant.name}</h2>

@@ -5,10 +5,10 @@ import DisplayItems from "./DisplayItems";
 function Slider({ restaurants }) {
   const [slider, setSlider] = useState(1);
   const delay = 3000;
-
+  const recommendations = restaurants[0].categories[1].food;
   useEffect(() => {
     const interval = setInterval(() => {
-      if (slider < restaurants[0].items.length) {
+      if (slider < recommendations.length) {
         setSlider(slider + 1);
       } else {
         setSlider(1);
@@ -16,14 +16,14 @@ function Slider({ restaurants }) {
     }, delay);
 
     return () => clearInterval(interval);
-  }, [slider, restaurants]);
+  }, [slider, recommendations]);
 
   return (
     <div className="daily_container">
-      <DisplayItems restaurants={restaurants} slider={slider} />
+      <DisplayItems recommendations={recommendations} slider={slider} />
       <ChangeSlider
         setSlider={setSlider}
-        restaurants={restaurants}
+        recommendations={recommendations}
         slider={slider}
       />
     </div>

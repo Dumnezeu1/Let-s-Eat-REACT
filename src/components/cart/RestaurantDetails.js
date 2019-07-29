@@ -5,7 +5,7 @@ function RestaurantDetails({ restaurant }) {
     <div className="modal-header">
       <div className="details-background">
         <img
-          src={require(`./../../../img/${restaurant.image}`)}
+          src={require(`./../../img/${restaurant.image}`)}
           alt={restaurant.name}
         />
       </div>

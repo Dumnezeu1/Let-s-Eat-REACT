@@ -2,10 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
-function DisplayItems({ restaurants, slider }) {
+function DisplayItems({ recommendations, slider }) {
   return (
     <span className="grid-container container">
-      {restaurants[0].items.slice(slider - 1, slider).map(item => (
+      {recommendations.slice(slider - 1, slider).map(item => (
         <span className="grid-item" key={slider}>
           <h2>
             {" "}
@@ -16,7 +16,7 @@ function DisplayItems({ restaurants, slider }) {
             <h3>{item.name}</h3>
             <p>{item.description}</p>
             <div className="daily-bottom-bar">
-              <h3>{item.price} lei</h3>
+              <h3>{item.price} RON</h3>
             </div>
           </div>
         </span>

@@ -1,0 +1,287 @@
+[
+  {
+    "id": 0,
+    "name": "Barbeque",
+    "sortiments": "Gratar, grill, bauturi",
+    "image": "bbq.jpg",
+    "categories": [
+      {
+        "name": "Gratar",
+        "food": [
+          {
+            "name": "Mititei",
+            "description": "Mici cu mustar/ 2 buc si franzela/ 1 buc",
+            "price": 5
+          },
+          {
+            "name": "Carnaciori",
+            "description": "Carnaciori pe gratar/ 2 buc",
+            "price": 4
+          },
+          {
+            "name": "Paine",
+            "description": "Paine pe gratar",
+            "price": 2
+          }
+        ]
+      },
+      {
+        "name": "Garnituri",
+        "food": [
+          {
+            "name": "Cartofi pai",
+            "description": "Cartofi pai pe gratar/ 30 gr",
+            "price": 7
+          },
+          {
+            "name": "Salata",
+            "description": "Varza, rosii, carne/ 300gr",
+            "price": 10
+          }
+        ]
+      },
+      {
+        "name": "Sosuri",
+        "food": [
+          {
+            "name": "Sos dulce",
+            "description": "1 buc",
+            "price": 2
+          },
+          {
+            "name": "Sos picant",
+            "description": "1 buc",
+            "price": 2
+          },
+          {
+            "name": "Sos tzatziky",
+            "description": "1 buc",
+            "price": 2.5
+          }
+        ]
+      },
+      {
+        "name": "Sucuri",
+        "food": [
+          {
+            "name": "Coca-cola",
+            "description": "330 ml",
+            "price": 3.5
+          },
+          {
+            "name": "Fanta",
+            "description": "330 ml",
+            "price": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Brutaria-paine",
+    "sortiments": "Paine ",
+    "image": "brutaria.jpg",
+    "categories": [
+      {
+        "name": "Paine",
+        "food": [
+          {
+            "name": "Paine alba",
+            "description": "Faina, ulei de masline",
+            "price": 1.5
+          },
+          {
+            "name": "Paine neagra",
+            "description": "Faina, carbuni ",
+            "price": 2
+          },
+          {
+            "name": "Paine cu seminte",
+            "description": "Paine, seminte floarea soarelui",
+            "price": 5.99
+          },
+          {
+            "name": "Paine cu miere",
+            "description": "Paine cu crusta de miere",
+            "price": 3.78
+          }
+        ]
+      },
+      {
+        "name": "Produse patiserie",
+        "food": [
+          {
+            "name": "Cozonac",
+            "description": "Blat pufos, rahat, nuci, miere, ciocolata/  450 g",
+            "price": 23
+          },
+          {
+            "name": "Pateuri",
+            "description": "Pateu de gasca/ 1kg",
+            "price": 5
+          },
+          {
+            "name": "Placinta cu branza",
+            "description": "Placinta care are branza/ 20gr",
+            "price": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Restaurant chinezesc",
+    "sortiments": "Peste, sushi, taitei ",
+    "image": "japanese.jpg",
+    "categories": [
+      {
+        "name": "Peste",
+        "food": [
+          {
+            "name": "Sushi somon regal",
+            "description": "350 gr",
+            "price": 55
+          },
+          {
+            "name": "Icre negre",
+            "description": "Icre de la un peste negru ",
+            "price": 70
+          },
+          {
+            "name": "Sushi de buget",
+            "description": "500",
+            "price": 30
+          },
+          {
+            "name": "Peste balon",
+            "description": "Peste otravitor si rar",
+            "price": 70
+          },
+          {
+            "name": "Pestisorul de aur",
+            "description": "Indeplineste o dorinta",
+            "price": 100
+          }
+        ]
+      },
+      {
+        "name": "Taitei",
+        "food": [
+          {
+            "name": "Taitei picanti",
+            "description": "200 g taitei, 1/2 varza alba, 1 ceapa, 1 ceasca de ulei, 1 lingura bulion de rosii, piper macinat/  450 g",
+            "price": 23
+          },
+          {
+            "name": "Taitei dulci",
+            "description": "200 g taitei, 1/2 varza alba, 1 ceasca de ulei, 1 lingura bulion de rosii/  450 g",
+            "price": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Restaurant italienesc",
+    "sortiments": "Paste, clatite, bauturi",
+    "image": "italian.jpg",
+    "categories": [
+      {
+        "name": "Paste",
+        "food": [
+          {
+            "name": "Paste italienesti ",
+            "description": "350 gr",
+            "price": 55
+          },
+          {
+            "name": "Paste cu ciocolata",
+            "description": "350 gr ",
+            "price": 70
+          }
+        ]
+      },
+      {
+        "name": "Clatite",
+        "food": [
+          {
+            "name": "Clatite cu gem de capsuni ",
+            "description": "3 buc",
+            "price": 10
+          },
+          {
+            "name": "Clatite cu gem de caise ",
+            "description": "3 buc",
+            "price": 11
+          },
+          {
+            "name": "Clatite cu nutella ",
+            "description": "3 buc",
+            "price": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Restaurant natural",
+    "sortiments": "Ciorbe, salate",
+    "image": "natural.jpg",
+    "categories": [
+      {
+        "name": "Ciorbe",
+        "food": [
+          {
+            "name": "Ciorba de burta ",
+            "description": "350 gr",
+            "price": 10
+          },
+          {
+            "name": "Ciorba legume",
+            "description": "350 gr ",
+            "price": 8
+          },
+          {
+            "name": "Ciorba PSD",
+            "description": "0 gr ",
+            "price": 800
+          }
+        ]
+      },
+      {
+        "name": "Vegetarian",
+        "food": [
+          {
+            "name": "Carne din soia ",
+            "description": "450 g",
+            "price": 10
+          },
+          {
+            "name": "Salata mixta ",
+            "description": "De toate",
+            "price": 11
+          }
+        ]
+      },
+      {
+        "name": "Sucuri naturale",
+        "food": [
+          {
+            "name": "Suc din fructul pasiunii ",
+            "description": "330 ml",
+            "price": 10
+          },
+          {
+            "name": "Suc din capsuni ",
+            "description": "330 ml",
+            "price": 11
+          }
+        ]
+      }
+    ]
+  }
+]

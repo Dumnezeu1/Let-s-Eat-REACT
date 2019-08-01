@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function CartDisplay({ cart, setCart }) {
-  const [showCart, setShowCart] = useState(true);
+  const [showCart, setShowCart] = useState(false);
   let style = "cos_container";
   if (showCart === true) {
     style += " modalDisplay";

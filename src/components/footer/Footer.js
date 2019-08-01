@@ -4,7 +4,7 @@ import Copyrights from "./Copyrights";
 
 function Footer() {
   const style = {
-    zIndex: 25321312,
+    zIndex: 10,
     position: "relative",
     backgroundColor: "rgb(242, 242, 243)"
   };

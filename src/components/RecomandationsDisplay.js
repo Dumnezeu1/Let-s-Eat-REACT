@@ -3,9 +3,8 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
-function DisplayItems({
+export default function RecomandationsDisplay({
   recommendations,
-  slider,
   restaurantName,
   retaurantRedirect
 }) {
@@ -16,8 +15,8 @@ function DisplayItems({
       style={{ textDecoration: "none" }}
     >
       <div className="grid-container container">
-        {recommendations.slice(slider - 1, slider).map(item => (
-          <span className="grid-item" key={slider}>
+        {recommendations.slice(0, 3).map(item => (
+          <span className="grid-item" key={item.name}>
             <h2>
               {" "}
               <FontAwesomeIcon icon={faTag} />
@@ -37,5 +36,3 @@ function DisplayItems({
     </Link>
   );
 }
-
-export default DisplayItems;

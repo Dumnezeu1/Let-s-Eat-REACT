@@ -21,7 +21,7 @@ function Products({ restaurant, setCart, cart }) {
   return (
     <div className="food-container">
       {" "}
-      {restaurant.categories.map((category, index) => (
+      {restaurant.categories.map(category => (
         <div key={category.name} className="restaurant_food container">
           <h3>{category.name}</h3>
           {category.food.map((foo, index) => (

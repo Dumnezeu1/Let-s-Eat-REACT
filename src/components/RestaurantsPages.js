@@ -12,19 +12,20 @@ function RestaurantsPages({ match, restaurants }) {
     return restaurant.name.indexOf(match.params.id) !== -1;
   });
 
-  console.log(findRestaurant);
   return (
-    <div className="modal-left">
-      {findRestaurant.map(restaurant => (
-        <div key={restaurant.id}>
-          <Restaurant restaurant={restaurant} />
-          <div className="items-container">
-            <Food cart={cart} setCart={setCart} restaurant={restaurant} />
-            <CartDisplay cart={cart} setCart={setCart} />
+    <>
+      <div className="modal-left">
+        {findRestaurant.map(restaurant => (
+          <div key={restaurant.id}>
+            <Restaurant restaurant={restaurant} />
+            <div className="items-container">
+              <Food cart={cart} setCart={setCart} restaurant={restaurant} />
+              <CartDisplay cart={cart} setCart={setCart} />
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 

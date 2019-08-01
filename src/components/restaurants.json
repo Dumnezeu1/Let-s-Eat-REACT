@@ -4,6 +4,39 @@
     "name": "Barbeque",
     "sortiments": "Gratar, grill, bauturi",
     "image": "bbq.jpg",
+    "adress": "George Enescu, nr 1",
+    "company_data": "S.C. CITY'S FAME S.R.L. ",
+    "working_time": [
+      {
+        "day": "Luni",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Marti",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Miercuri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Joi",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Vineri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Sambata",
+        "open": "Inchis"
+      },
+      {
+        "day": "Duminica",
+        "open": "Inchis"
+      }
+    ],
+
     "categories": [
       {
         "name": "Gratar",
@@ -82,6 +115,38 @@
     "name": "Brutaria-paine",
     "sortiments": "Paine ",
     "image": "brutaria.jpg",
+    "adress": "Brestei, nr 4",
+    "company_data": "S.C. Brutaria-paine S.R.L.",
+    "working_time": [
+      {
+        "day": "Luni",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Marti",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Miercuri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Joi",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Vineri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Sambata",
+        "open": "Inchis"
+      },
+      {
+        "day": "Duminica",
+        "open": "Inchis"
+      }
+    ],
     "categories": [
       {
         "name": "Paine",
@@ -135,6 +200,38 @@
     "name": "Restaurant chinezesc",
     "sortiments": "Peste, sushi, taitei ",
     "image": "japanese.jpg",
+    "adress": "Bulevardul Decebal, nr 4",
+    "company_data": "S.C. Bulevardul Decebal S.R.L. ",
+    "working_time": [
+      {
+        "day": "Luni",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Marti",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Miercuri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Joi",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Vineri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Sambata",
+        "open": "09:00-21:30"
+      },
+      {
+        "day": "Duminica",
+        "open": "12:00-19:00"
+      }
+    ],
     "categories": [
       {
         "name": "Peste",
@@ -188,6 +285,38 @@
     "name": "Restaurant italienesc",
     "sortiments": "Paste, clatite, bauturi",
     "image": "italian.jpg",
+    "adress": "Str fulger, nr 14",
+    "company_data": "S.C. Italienesc FAME S.R.L. ",
+    "working_time": [
+      {
+        "day": "Luni",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Marti",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Miercuri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Joi",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Vineri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Sambata",
+        "open": "Inchis"
+      },
+      {
+        "day": "Duminica",
+        "open": "Inchis"
+      }
+    ],
     "categories": [
       {
         "name": "Paste",
@@ -231,6 +360,38 @@
     "name": "Restaurant natural",
     "sortiments": "Ciorbe, salate",
     "image": "natural.jpg",
+    "adress": "Aleea Isvarna, nr 41",
+    "company_data": "S.C. Restaurant natural S.R.L.",
+    "working_time": [
+      {
+        "day": "Luni",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Marti",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Miercuri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Joi",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Vineri",
+        "open": "10:00-23:00"
+      },
+      {
+        "day": "Sambata",
+        "open": "10:00-20:00"
+      },
+      {
+        "day": "Duminica",
+        "open": "Inchis"
+      }
+    ],
     "categories": [
       {
         "name": "Ciorbe",

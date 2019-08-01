@@ -1,35 +1,33 @@
 import React from "react";
 import "./css/App.css";
-
 import Logo from "./components/logo/Logo";
-import Slider from "./components/recomandation-slider/Slider";
 import Restaurants from "./components/restaurants-display/Restaurants";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Recomandations from "./components/Recomandations";
 import RestaurantsPages from "./components/RestaurantsPages";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   var restaurants = require("./components/restaurants.json");
 
   return (
     <Router>
-      <div>
-        <Navbar />
-        <Switch>
+      <Navbar />
+      <Switch>
+        <ScrollToTop>
           <Route
             exact
             path={`/`}
             render={props => (
               <div>
                 <Logo />
-                <Slider restaurants={restaurants} />
+                <Recomandations restaurants={restaurants} />
                 <Restaurants restaurants={restaurants} />
               </div>
             )}
           />
-
           <Route
             exact
             path={`/restaurant/:id`}
@@ -37,10 +35,9 @@ function App() {
               <RestaurantsPages restaurants={restaurants} match={props.match} />
             )}
           />
-        </Switch>
-
-        <Footer />
-      </div>
+        </ScrollToTop>
+      </Switch>
+      <Footer />
     </Router>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CartDisplay from "./cart/CartDisplay";
 import Food from "./cart/Food";
-import Restaurant from "./cart/RestaurantDetails";
+import RestaurantDetails from "./cart/RestaurantDetails";
 
 function RestaurantsPages({ match, restaurants }) {
   let [cart, setCart] = useState(
@@ -17,7 +17,7 @@ function RestaurantsPages({ match, restaurants }) {
       <div className="modal-left">
         {findRestaurant.map(restaurant => (
           <div key={restaurant.id}>
-            <Restaurant restaurant={restaurant} />
+            <RestaurantDetails restaurant={restaurant} />
             <div className="items-container">
               <Food cart={cart} setCart={setCart} restaurant={restaurant} />
               <CartDisplay cart={cart} setCart={setCart} />

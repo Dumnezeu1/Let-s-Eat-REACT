@@ -34,6 +34,31 @@ function CartDisplay({ cart, setCart }) {
           <Cart cart={cart} setCart={setCart} />
           <br />
           <TotalPrice />
+          <div className="modal-adress">
+            <form className="form-adress">
+              <h3>Adresa</h3>
+              <textarea
+                name="Adresa"
+                id="adresa"
+                placeholder="Ex: Str. Fulger Nr. 01"
+                required
+              />
+              <h3>Nr Telefon</h3>
+              <input
+                type="tel"
+                name="telphone"
+                placeholder="Ex: 07x.xxx.xxx"
+                pattern="[0-9]{10}"
+                maxLength="10"
+                title="Ten digits code"
+                required
+              />
+              <h3>Observatii</h3>
+              <textarea name="Observatii" id="observatii" />
+              <br />
+              <button>Comanda!</button>
+            </form>
+          </div>
         </div>
       </aside>
     </>

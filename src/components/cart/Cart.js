@@ -64,9 +64,7 @@ export default function Cart({ cart, setCart }) {
                 />
                 <button onClick={() => MoreQuantity(index)}>+</button>
               </div>
-              <button className="btn-remove" onClick={() => RemoveItem(index)}>
-                Remove
-              </button>
+              <button onClick={() => RemoveItem(index)}>Remove</button>
             </div>
           </div>
         </div>

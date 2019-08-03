@@ -1167,7 +1167,7 @@ input[type="number"] {
 }
 
 .cos-produs {
-  justify-content: center;
+  justify-content: space-between;
   justify-items: center;
   display: flex;
   flex-direction: column;
@@ -1268,7 +1268,7 @@ input[type="number"] {
 .wrapperr {
   padding: 30px 0;
   text-decoration: none;
-  background-color: #242424;
+  background-color: rgb(243, 232, 232);
   border-bottom: 1px solid gray;
   border-top: 1px solid gray;
   margin-bottom: -19px;
@@ -1296,7 +1296,7 @@ input[type="number"] {
   color: rgb(100, 94, 94);
   line-height: 20px;
   width: 175px;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .gallery_about:hover img,
@@ -1304,22 +1304,19 @@ input[type="number"] {
 .gallery_about:hover h3,
 .gallery_about:hover h4 {
   opacity: 1;
-  color: rgb(219, 210, 210);
-}
-
-.gallery_about img {
-  opacity: 0.2;
+  color: rgb(0, 0, 0);
 }
 
 .produse-cos {
   width: 100%;
   margin-bottom: 20px;
+  justify-content: space-between;
 }
 .produs-info {
   display: flex;
   flex-direction: column;
   margin-right: 5px;
-  width: 65%;
+  width: 60%;
 }
 
 .produs-numar {
@@ -1327,7 +1324,7 @@ input[type="number"] {
 }
 
 .produse-cos p {
-  width: 120px;
+  width: 100px;
   margin: 0 0 0 5px;
   padding-right: 15px;
 }
@@ -1336,7 +1333,7 @@ input[type="number"] {
   display: flex;
   flex-direction: column;
   height: 20px;
-  width: 20%;
+  width: auto;
 }
 
 .quantity-container {
@@ -1420,6 +1417,10 @@ input[type="number"] {
 
 /* tableta */
 @media (max-width: 1150px) {
+  .produs-cantitate > button {
+    margin: 5px 0;
+  }
+
   .restaurante-container {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -1520,6 +1521,10 @@ input[type="number"] {
 }
 
 @media (max-width: 760px) {
+  .produs-info {
+    width: 100%;
+  }
+
   .chef {
     width: 95%;
   }

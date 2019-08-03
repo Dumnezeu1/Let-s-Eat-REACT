@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./css/App.css";
 import Logo from "./components/logo/Logo";
 import Restaurants from "./components/restaurants-display/Restaurants";
@@ -6,6 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Recomandations from "./components/Recomandations";
 import RestaurantsPages from "./components/RestaurantsPages";
+import AboutPage from "./components/about/AboutPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -25,6 +26,15 @@ function App() {
                 <Logo />
                 <Recomandations restaurants={restaurants} />
                 <Restaurants restaurants={restaurants} />
+              </div>
+            )}
+          />
+          <Route
+            exact
+            path={`/about`}
+            render={props => (
+              <div>
+                <AboutPage />
               </div>
             )}
           />

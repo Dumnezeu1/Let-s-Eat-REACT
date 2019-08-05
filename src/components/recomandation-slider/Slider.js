@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import ChangeSlider from "./ChangeSlider";
 import DisplayItems from "./DisplayItems";
 
-function Slider({ recommendations, restaurantName }) {
+function Slider({ recomandations, restaurantName }) {
   const [slider, setSlider] = useState(1);
   const delay = 3000;
   useEffect(() => {
     const interval = setInterval(() => {
-      if (slider < recommendations.length) {
+      if (slider < recomandations.length) {
         setSlider(slider + 1);
       } else {
         setSlider(1);
@@ -15,18 +15,18 @@ function Slider({ recommendations, restaurantName }) {
     }, delay);
 
     return () => clearInterval(interval);
-  }, [slider, recommendations]);
+  }, [slider, recomandations]);
 
   return (
     <div className="daily_container">
       <DisplayItems
-        recommendations={recommendations}
+        recomandations={recomandations}
         slider={slider}
         restaurantName={restaurantName}
       />
       <ChangeSlider
         setSlider={setSlider}
-        recommendations={recommendations}
+        recomandations={recomandations}
         slider={slider}
       />
     </div>

@@ -1,8 +1,8 @@
 import React from "react";
 
-function ChangeSlider({ slider, setSlider, recommendations }) {
+function ChangeSlider({ slider, setSlider, recomandations }) {
   function nextSlider() {
-    if (slider < recommendations.length) {
+    if (slider < recomandations.length) {
       setSlider(slider + 1);
     } else setSlider(1);
   }
@@ -11,7 +11,7 @@ function ChangeSlider({ slider, setSlider, recommendations }) {
     if (slider > 1) {
       setSlider(slider - 1);
     } else {
-      setSlider(recommendations.length);
+      setSlider(recomandations.length);
     }
   }
   return (

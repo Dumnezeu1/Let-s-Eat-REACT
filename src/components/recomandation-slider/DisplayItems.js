@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 function DisplayItems({
-  recommendations,
+  recomandations,
   slider,
   restaurantName,
   retaurantRedirect
@@ -16,7 +16,7 @@ function DisplayItems({
       style={{ textDecoration: "none" }}
     >
       <div className="grid-container container">
-        {recommendations.slice(slider - 1, slider).map(item => (
+        {recomandations.slice(slider - 1, slider).map(item => (
           <span className="grid-item" key={slider}>
             <h2>
               {" "}

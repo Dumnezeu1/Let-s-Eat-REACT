@@ -4,19 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTag } from "@fortawesome/free-solid-svg-icons";
 
 export default function RecomandationsDisplay({
-  recommendations,
+  recomandations,
   restaurantName,
   retaurantRedirect
 }) {
   return (
-    <Link
-      exact="true"
-      to={retaurantRedirect}
-      style={{ textDecoration: "none" }}
-    >
-      <div className="grid-container container">
-        {recommendations.slice(0, 3).map(item => (
-          <span className="grid-item" key={item.name}>
+    <div className="grid-container container">
+      {recomandations.slice(0, 3).map(item => (
+        <span className="grid-item" key={item.name}>
+          <Link
+            exact="true"
+            to={retaurantRedirect}
+            style={{ textDecoration: "none" }}
+          >
             <h2>
               {" "}
               <FontAwesomeIcon icon={faTag} />
@@ -30,9 +30,9 @@ export default function RecomandationsDisplay({
                 <h3>{restaurantName}</h3>
               </div>
             </div>
-          </span>
-        ))}
-      </div>
-    </Link>
+          </Link>
+        </span>
+      ))}
+    </div>
   );
 }

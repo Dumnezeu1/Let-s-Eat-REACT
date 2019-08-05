@@ -4,9 +4,13 @@ import RecomandationsDisplay from "./RecomandationsDisplay";
 import MediaQuery from "react-responsive";
 
 export default function Recomandations({ restaurants }) {
-  const which = 2;
-  const recommendations = restaurants[which].categories[0].food;
-  const restaurantName = restaurants[which].name;
+  const whichRestaurant =
+    restaurants[Math.floor(Math.random() * restaurants.length)];
+  const categoryLength = whichRestaurant.categories.length;
+  const whichFood =
+    whichRestaurant.categories[Math.floor(Math.random() * categoryLength)];
+  const recomandations = whichFood.food;
+  const restaurantName = whichRestaurant.name;
   const retaurantRedirect = `restaurant/${restaurantName}`;
 
   return (
@@ -15,13 +19,13 @@ export default function Recomandations({ restaurants }) {
         {matches =>
           matches ? (
             <Slider
-              recommendations={recommendations}
+              recomandations={recomandations}
               restaurantName={restaurantName}
               retaurantRedirect={retaurantRedirect}
             />
           ) : (
             <RecomandationsDisplay
-              recommendations={recommendations}
+              recomandations={recomandations}
               restaurantName={restaurantName}
               retaurantRedirect={retaurantRedirect}
             />

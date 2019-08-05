@@ -508,6 +508,7 @@ input[type="number"] {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
+  cursor: default;
 }
 
 .grid-item {

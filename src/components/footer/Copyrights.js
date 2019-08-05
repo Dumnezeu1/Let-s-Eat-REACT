@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FooterInfo from "./FooterInfo";
+import FooterInfo from "./FooterInfoModal";
 
 function Copyrights() {
   const footerInfo = require("./footer.json");

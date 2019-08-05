@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./css/App.css";
 import Logo from "./components/logo/Logo";
 import Restaurants from "./components/restaurants-display/Restaurants";
@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  var restaurants = require("./components/restaurants.json");
+  const restaurants = require("./components/restaurants.json");
 
   return (
     <Router>

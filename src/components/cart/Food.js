@@ -3,7 +3,6 @@ import SortimentSelectBar from "./SortimentSelectBar";
 
 function Products({ restaurant, setCart, cart }) {
   const [findSortiment, setFindSortiment] = useState("");
-  console.log(findSortiment);
 
   function AddOnClick(items) {
     var found = cart.find(element => {

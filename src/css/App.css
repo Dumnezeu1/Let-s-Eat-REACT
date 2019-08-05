@@ -818,8 +818,9 @@ input[type="number"] {
   margin: 15px 10px;
 }
 
-.copyrights_support p:hover {
+.copyrights_support p:nth-child(1):hover {
   color: rgb(223, 9, 109);
+  cursor: pointer;
 }
 
 .modal-left {

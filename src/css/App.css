@@ -506,8 +506,8 @@ input[type="number"] {
 /* oferte */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 15px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10%;
   cursor: default;
 }
 
@@ -1442,6 +1442,7 @@ input[type="number"] {
 
   .grid-container {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
   }
 
   .grid-item:nth-child(3) {

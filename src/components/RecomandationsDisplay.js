@@ -10,8 +10,8 @@ export default function RecomandationsDisplay({
 }) {
   return (
     <div className="grid-container container">
-      {recomandations.slice(0, 3).map(item => (
-        <span className="grid-item" key={item.name}>
+      {recomandations.slice(0, 2).map(item => (
+        <div className="grid-item" key={item.name}>
           <Link
             exact="true"
             to={retaurantRedirect}
@@ -31,7 +31,7 @@ export default function RecomandationsDisplay({
               </div>
             </div>
           </Link>
-        </span>
+        </div>
       ))}
     </div>
   );

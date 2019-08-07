@@ -19,18 +19,13 @@ function Navbar() {
       </Link>
       <ul className={open}>
         <li>
-          <Link exact="true" to="/">
+          <Link exact="true" to="/" onClick={e => setToggleNavbar(false)}>
             Home
           </Link>
         </li>
         <li>
-          <Link exact="true" to="/about" id="aboutbtn">
+          <Link exact="true" to="/about" onClick={e => setToggleNavbar(false)}>
             About
-          </Link>
-        </li>
-        <li>
-          <Link exact="true" to="/contacts">
-            Contact
           </Link>
         </li>
       </ul>

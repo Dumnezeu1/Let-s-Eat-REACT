@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ChangeSlider from "./ChangeSlider";
 import DisplayItems from "./DisplayItems";
 
-function Slider({ recomandations, restaurantName }) {
+function Slider({ recomandations, restaurantName, retaurantRedirect }) {
   const [slider, setSlider] = useState(1);
   const delay = 3000;
   useEffect(() => {
@@ -23,6 +23,7 @@ function Slider({ recomandations, restaurantName }) {
         recomandations={recomandations}
         slider={slider}
         restaurantName={restaurantName}
+        retaurantRedirect={retaurantRedirect}
       />
       <ChangeSlider
         setSlider={setSlider}

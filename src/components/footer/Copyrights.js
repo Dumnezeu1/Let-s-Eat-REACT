@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import FooterInfo from "./FooterInfoModal";
 
-function Copyrights() {
-  const footerInfo = require("./footer.json");
+function Copyrights({ footerData }) {
   const [footerInfoDisplay, setFooterInfoDisplay] = useState(false);
   const [footerInfoModal, setFooterInfoModal] = useState("");
 
@@ -11,7 +10,7 @@ function Copyrights() {
       <div className="copyrights">
         <p className="copyrights_designed">Copyright &#169; Let's Eat 2019.</p>
         <div className="copyrights_support">
-          {footerInfo.map(fInfo => (
+          {footerData.map(fInfo => (
             <div key={fInfo.name}>
               <p
                 onClick={() => {

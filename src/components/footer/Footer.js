@@ -2,9 +2,9 @@ import React from "react";
 import Socialize from "./Socialize";
 import Copyrights from "./Copyrights";
 
-function Footer() {
+function Footer({ footerData }) {
   const style = {
-    zIndex: 10,
+    zIndex: 8,
     position: "relative",
     backgroundColor: "rgb(242, 242, 243)"
   };
@@ -12,7 +12,7 @@ function Footer() {
     <footer style={style}>
       <div className="container">
         <Socialize />
-        <Copyrights />
+        <Copyrights footerData={footerData} />
       </div>
     </footer>
   );

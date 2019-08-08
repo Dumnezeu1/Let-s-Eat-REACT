@@ -395,7 +395,7 @@ html,
 body {
   font-family: "Times New Roman", Times, serif;
   color: #333;
-  background-color: rgb(242, 242, 243);
+  background-color: white;
   padding-top: 35px;
   width: 100%;
   margin: 0 auto;
@@ -403,13 +403,12 @@ body {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  /* display: none; <- Crashes Chrome on hover */
   -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  margin: 0;
 }
 
 input[type="number"] {
-  -moz-appearance: textfield; /* Firefox */
+  -moz-appearance: textfield;
 }
 
 .modalDisplay {
@@ -503,7 +502,6 @@ input[type="number"] {
   margin-bottom: 30px;
 }
 
-/* oferte */
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -519,12 +517,10 @@ input[type="number"] {
   margin: 40px 0;
 }
 
-/* 3 rd item */
 .grid-item:nth-child(3) {
   border-color: #ed7f5f;
 }
 
-/* title */
 .grid-item h2 {
   padding: 10px 15px;
   margin: 0;
@@ -543,7 +539,6 @@ input[type="number"] {
   background-color: #ed7f5f;
 }
 
-/* Text from the item/general(producs+info about it) */
 .daily-text {
   margin: 10px;
   font-size: 15px;
@@ -560,7 +555,6 @@ input[type="number"] {
   margin-bottom: 15px;
 }
 
-/* bottom part (price,product name, command) */
 .daily-bottom-bar {
   display: flex;
   justify-content: space-between;
@@ -591,12 +585,10 @@ input[type="number"] {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   height: 80px;
   display: flex;
-  /* box-shadow: 0 2px 28px 0 rgba(192, 192, 192, 0.192); */
   width: 700px;
   margin: 40px auto 0 auto;
 }
 
-/* search button */
 #Search {
   display: none;
 }
@@ -659,7 +651,6 @@ input[type="number"] {
   transition: all ease-in-out 0.3s;
 }
 
-/* restaurante */
 .container {
   margin-right: 10%;
   margin-left: 10%;
@@ -715,7 +706,7 @@ input[type="number"] {
 .fix {
   width: 68%;
 }
-/* socialize bar */
+
 .socialize {
   padding: 20px;
   height: 130px;
@@ -946,7 +937,6 @@ input[type="number"] {
   margin-bottom: 50px;
 }
 
-/* restaurant img */
 .details-background {
   height: 400px;
   width: 100%;
@@ -1042,7 +1032,6 @@ input[type="number"] {
   padding-left: 5px;
 }
 
-/* alegere mancare */
 .restaurant-sortiments {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   height: auto;
@@ -1156,7 +1145,6 @@ input[type="number"] {
   width: auto;
 }
 
-/* modal right */
 .modal-cos {
   margin-top: 50px;
   padding: 0 20px;
@@ -1223,17 +1211,8 @@ input[type="number"] {
   text-align: center;
 }
 
-/* about page */
 .about-products-bg {
   height: 550px;
-}
-
-.about-products-bg_bg {
-  background-image: url(../img/dish.jpg);
-  height: 100%;
-  background-position: bottom;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .textp {
@@ -1299,6 +1278,10 @@ input[type="number"] {
   line-height: 20px;
   width: 175px;
   opacity: 0.7;
+}
+
+.gallery img {
+  height: 175px;
 }
 
 .gallery_about:hover img,
@@ -1417,7 +1400,7 @@ input[type="number"] {
   }
 }
 
-/* tableta */
+/* Tablet */
 @media (max-width: 1150px) {
   .produs-cantitate > button {
     margin: 5px 0;
@@ -1498,13 +1481,10 @@ input[type="number"] {
     box-shadow: -5px 0px 14px -3px rgba(95, 95, 95, 0.75);
   }
 
-  .fix {
-    width: 100%;
-  }
-  /* modal-cos */
   .modal-left {
     width: 100%;
   }
+
   .cos_content {
     margin: auto;
     width: 75%;
@@ -1563,6 +1543,7 @@ input[type="number"] {
 
   .navbar ul.open {
     max-height: 100vh;
+    z-index: 9;
   }
 
   .navbar ul li {

@@ -39,7 +39,7 @@ function Socialize() {
           <FontAwesomeIcon icon={faTwitter} />
         </a>
         <a
-          href="www.google.com"
+          href="https://www.google.com"
           aria-label="See our instagram page"
           rel="noopener noreferrer"
           target="_blank"

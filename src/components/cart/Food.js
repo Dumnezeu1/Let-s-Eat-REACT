@@ -29,6 +29,7 @@ function Products({ restaurant, setCart, cart }) {
     <>
       <SortimentSelectBar
         restaurant={restaurant}
+        findSortiment={findSortiment}
         setFindSortiment={setFindSortiment}
       />
       <div className="food-container">

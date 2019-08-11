@@ -12,9 +12,12 @@ function DisplayRestaurant({ restaurants, search }) {
   function redirect(name) {
     return `/restaurant/${name}`;
   }
+
+  const restaurantsMessage = "Alege restaturantul preferat!";
+
   return (
     <div className="container">
-      <h1 className="center">Alege restaturantul preferat!</h1>
+      <h1 className="center">{restaurantsMessage}</h1>
       <div className="restaurante-container">
         {filteredRestaurants.map(restaurant => (
           <Link

@@ -51,7 +51,8 @@ export default function Cart({ cart, setCart }) {
               <p className="item-info">{products.description}</p>
             </div>
             <p>
-              Price: <br /> {products.quantity * products.price} RON
+              Price: <br /> {(products.quantity * products.price).toFixed(2)}{" "}
+              RON
             </p>
             <div className="produs-cantitate">
               <div className="quantity-container">

@@ -9,7 +9,6 @@ function RestaurantDetails({ restaurant }) {
       {modalDetailsDisplay && (
         <RestaurantDetailsModal
           restaurant={restaurant}
-          modalDetailsDisplay={modalDetailsDisplay}
           setDetailsDisplay={setDetailsDisplay}
         />
       )}

@@ -10,6 +10,7 @@ import AboutPage from "./components/about/AboutPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Loading from "./components/loading/Loading";
+import NoMatch from "./NoMatch";
 
 function App() {
   const [data, setData] = useState(undefined);
@@ -35,28 +36,24 @@ function App() {
     <>
       {data !== undefined && (
         <Router>
-          <Navbar />
-          <Switch>
-            <ScrollToTop>
+          <ScrollToTop>
+            <Navbar />
+            <Switch>
               <Route
                 exact
                 path={`/`}
-                render={props => (
-                  <div>
+                render={() => (
+                  <>
                     <Logo />
                     <Recomandations restaurants={data.restaurants} />
                     <Restaurants restaurants={data.restaurants} />
-                  </div>
+                  </>
                 )}
               />
               <Route
                 exact
                 path={`/about`}
-                render={props => (
-                  <div>
-                    <AboutPage aboutData={data.about} />
-                  </div>
-                )}
+                render={() => <AboutPage aboutData={data.about} />}
               />
               <Route
                 exact
@@ -68,9 +65,10 @@ function App() {
                   />
                 )}
               />
-            </ScrollToTop>
-          </Switch>
-          <Footer footerData={data.footer} />
+              <Route component={NoMatch} />
+            </Switch>
+            <Footer footerData={data.footer} />
+          </ScrollToTop>
         </Router>
       )}
       {data === undefined && (

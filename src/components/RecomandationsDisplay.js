@@ -8,6 +8,8 @@ export default function RecomandationsDisplay({
   restaurantName,
   retaurantRedirect
 }) {
+  const recomandMessage = " Vă recomandăm";
+
   return (
     <div className="grid-container container">
       {recomandations.slice(0, 2).map(item => (
@@ -20,7 +22,7 @@ export default function RecomandationsDisplay({
             <h2>
               {" "}
               <FontAwesomeIcon icon={faTag} />
-              Vă recomandăm
+              {recomandMessage}
             </h2>
             <div className="daily-text">
               <h3>{item.name}</h3>

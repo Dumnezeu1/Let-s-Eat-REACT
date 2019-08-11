@@ -2,9 +2,12 @@ import React from "react";
 
 export default function RestaurantDetailsModal({
   restaurant,
-  modalDetailsDisplay,
   setDetailsDisplay
 }) {
+  const adressMessage = "Adresă";
+  const infoMessaje = "Date societate";
+  const workingTimeMessage = "Program";
+
   return (
     <div id="detalii" className="modal_container">
       <div className="modal-detalii-container">
@@ -23,15 +26,15 @@ export default function RestaurantDetailsModal({
         <h2 className="modal-detalii-title">{restaurant.name}</h2>
         <div className="modal-detalii">
           <div className="modal-detalii-content">
-            <h2>Adresă</h2>
+            <h2>{adressMessage}</h2>
             <p>{restaurant.adress}</p>
           </div>
           <div className="modal-detalii-content">
-            <h2>Date societate</h2>
+            <h2>{infoMessaje}</h2>
             <p>{restaurant.company_data}</p>
           </div>
           <div className="modal-detalii-content">
-            <h2>Program</h2>
+            <h2>{workingTimeMessage}</h2>
             <table>
               <tbody>
                 {restaurant.working_time.map(orar => (

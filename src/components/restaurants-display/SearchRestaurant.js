@@ -1,9 +1,11 @@
 import React from "react";
 
 function SearchRestaurant({ search, setSearch }) {
+  const restaurantSearchMessage = "Cauta un restaurantul dupa preferinte!";
+  const restaurantSearchPlaceholder = "Cauta restaurant/sortiment";
   return (
     <section>
-      <h1 className="center">Cauta un restaurantul dupa preferinte!</h1>
+      <h1 className="center">{restaurantSearchMessage}</h1>
       <div className="search-wrapper">
         <form autoComplete="off">
           <input
@@ -12,7 +14,7 @@ function SearchRestaurant({ search, setSearch }) {
             type="text"
             value={search}
             onChange={e => setSearch(e.target.value)}
-            placeholder="Cauta restaurant/sortiment"
+            placeholder={restaurantSearchPlaceholder}
           />
         </form>
       </div>

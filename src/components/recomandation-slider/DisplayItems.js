@@ -9,6 +9,7 @@ function DisplayItems({
   restaurantName,
   retaurantRedirect
 }) {
+  const recomandMessage = " Vă recomandăm";
   return (
     <Link
       exact="true"
@@ -21,7 +22,7 @@ function DisplayItems({
             <h2>
               {" "}
               <FontAwesomeIcon icon={faTag} />
-              Vă recomandăm
+              {recomandMessage}
             </h2>
             <div className="daily-text">
               <h3>{item.name}</h3>

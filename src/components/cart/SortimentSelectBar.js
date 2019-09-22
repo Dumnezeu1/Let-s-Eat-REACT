@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function SortimentSelectBar({ restaurant, setFindSortiment }) {
+export default function SortimentSelectBar({
+  restaurant,
+  setFindSortiment,
+  findSortiment
+}) {
   return (
     <div className="restaurant-sortiments">
       <div className="restaurant-menu">
@@ -8,20 +12,25 @@ export default function SortimentSelectBar({ restaurant, setFindSortiment }) {
           {restaurant.categories.map(category => (
             <button
               key={category.name}
-              className=" restaurant-item"
+              className={
+                category.name === findSortiment ? "active" : "restaurant-item"
+              }
               onClick={() => {
                 setFindSortiment(category.name);
               }}
             >
+              {category.name === findSortiment ? "> " : ""}
+
               {category.name}
             </button>
           ))}
           <button
-            className=" restaurant-item"
+            className={findSortiment === "" ? "active" : "restaurant-item"}
             onClick={() => {
               setFindSortiment("");
             }}
           >
+            {findSortiment === "" ? "> " : ""}
             All
           </button>
         </div>

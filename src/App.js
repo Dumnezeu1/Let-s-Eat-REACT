@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./css/App.css";
 import Logo from "./components/logo/Logo";
 import Restaurants from "./components/restaurants-display/Restaurants";
@@ -11,72 +11,56 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import Loading from "./components/loading/Loading";
 import NoMatch from "./NoMatch";
+import { useFetch } from "./hooks";
 
 function App() {
-  const [data, setData] = useState(undefined);
+  // const [data, setData] = useState(undefined);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const data = useFetch(
+    "https://my-json-server.typicode.com/Dumnezeu1/Json/data",
+    undefined
+  );
 
-  const fetchData = async () => {
-    try {
-      const json = "https://my-json-server.typicode.com/Dumnezeu1/Json/data";
-      await fetch(json)
-        .then(resp => resp.json())
-        .then(res => {
-          setData(res[0]);
-        });
-    } catch (error) {
-      alert(error);
-    }
-  };
-
-  return (
-    <>
-      {data !== undefined && (
-        <Router>
-          <ScrollToTop>
-            <Navbar />
-            <Switch>
-              <Route
-                exact
-                path={`/`}
-                render={() => (
-                  <>
-                    <Logo />
-                    <Recomandations restaurants={data.restaurants} />
-                    <Restaurants restaurants={data.restaurants} />
-                  </>
-                )}
+  return data !== undefined ? (
+    <Router>
+      <ScrollToTop>
+        <Navbar />
+        <Switch>
+          <Route
+            exact
+            path={`/`}
+            render={() => (
+              <>
+                <Logo />
+                <Recomandations restaurants={data.restaurants} />
+                <Restaurants restaurants={data.restaurants} />
+              </>
+            )}
+          />
+          <Route
+            exact
+            path={`/about`}
+            render={() => <AboutPage aboutData={data.about} />}
+          />
+          <Route
+            exact
+            path={`/restaurant/:id`}
+            render={props => (
+              <RestaurantsPages
+                restaurants={data.restaurants}
+                match={props.match}
               />
-              <Route
-                exact
-                path={`/about`}
-                render={() => <AboutPage aboutData={data.about} />}
-              />
-              <Route
-                exact
-                path={`/restaurant/:id`}
-                render={props => (
-                  <RestaurantsPages
-                    restaurants={data.restaurants}
-                    match={props.match}
-                  />
-                )}
-              />
-              <Route component={NoMatch} />
-            </Switch>
-            <Footer footerData={data.footer} />
-          </ScrollToTop>
-        </Router>
-      )}
-      {data === undefined && (
-        <div>
-          <Loading />
-        </div>
-      )}
-    </>
+            )}
+          />
+          <Route component={NoMatch} />
+        </Switch>
+        <Footer footerData={data.footer} />
+      </ScrollToTop>
+    </Router>
+  ) : (
+    <div>
+      <Loading />
+    </div>
   );
 }
 

@@ -31,7 +31,6 @@ function Products({ restaurant, setCart, cart }) {
         restaurant={restaurant}
         findSortiment={findSortiment}
         setFindSortiment={setFindSortiment}
-        findSortiment={findSortiment}
       />
       <div className="food-container">
         {" "}

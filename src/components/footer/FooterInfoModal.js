@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { useClickOutside } from "./../../hooks";
 
 export default function FooterInfo({ footerInfoModal, setFooterInfoDisplay }) {
+  const footerModalRef = useRef(null);
+  const clickOutside = useClickOutside(footerModalRef);
+
+  useEffect(() => {
+    if (clickOutside === footerModalRef) {
+      setFooterInfoDisplay(false);
+    }
+  }, [clickOutside, setFooterInfoDisplay]);
+
   const modalTextStyle = {
     height: "auto",
     paddingTop: "20px",
@@ -13,7 +23,7 @@ export default function FooterInfo({ footerInfoModal, setFooterInfoDisplay }) {
   };
 
   return (
-    <div id="detalii" className="modal_container">
+    <div ref={footerModalRef} id="detalii" className="modal_container">
       <div className="modal-detalii-container">
         <span
           className="close-restaurant-modal"

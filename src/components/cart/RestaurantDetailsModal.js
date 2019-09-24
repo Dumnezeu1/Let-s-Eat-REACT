@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { useClickOutside } from "./../../hooks";
 
 export default function RestaurantDetailsModal({
   restaurant,
@@ -8,9 +9,18 @@ export default function RestaurantDetailsModal({
   const infoMessaje = "Date societate";
   const workingTimeMessage = "Program";
 
+  const retaurantModalRef = useRef(null);
+  const clickOutside = useClickOutside(retaurantModalRef);
+
+  useEffect(() => {
+    if (clickOutside === retaurantModalRef) {
+      setDetailsDisplay(false);
+    }
+  }, [clickOutside, setDetailsDisplay]);
+
   return (
     <div id="detalii" className="modal_container">
-      <div className="modal-detalii-container">
+      <div ref={retaurantModalRef} className="modal-detalii-container">
         <span
           className="close-restaurant-modal"
           onClick={() => {

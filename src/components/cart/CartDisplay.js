@@ -9,6 +9,7 @@ function CartDisplay({ cart, setCart }) {
   const [details, setDetails] = useState("");
 
   const [showCart, setShowCart] = useState(false);
+
   let style = "cos_container";
   if (showCart === true) {
     style += " modalDisplay";

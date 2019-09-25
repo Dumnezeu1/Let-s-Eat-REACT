@@ -14,8 +14,6 @@ import NoMatch from "./NoMatch";
 import { useFetch } from "./hooks";
 
 function App() {
-  // const [data, setData] = useState(undefined);
-
   const data = useFetch(
     "https://my-json-server.typicode.com/Dumnezeu1/Json/data",
     undefined

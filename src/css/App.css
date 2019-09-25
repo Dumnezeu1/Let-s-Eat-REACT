@@ -376,6 +376,7 @@ input[type="number"] {
   transition: all ease-in-out 0.3s;
   color: #df096d;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 .modalDisplay {
@@ -394,28 +395,12 @@ input[type="number"] {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 3;
 }
 
 .navbar a {
   text-decoration: none;
   color: #ac0c89;
-}
-
-.navbar a.navbar-brand {
-  float: left;
-  height: inherit;
-  line-height: inherit;
-  padding: 0 30px;
-  font-size: 22px;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 2px;
-}
-
-.navbar a.navbar-brand span {
-  font-size: 28px;
-  font-weight: 700;
 }
 
 .navbar ul {
@@ -439,8 +424,24 @@ input[type="number"] {
   height: 100%;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a :hover {
   background-color: rgba(119, 115, 115, 0.15);
+}
+
+.navbar a.navbar-brand {
+  float: left;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 30px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.navbar a.navbar-brand span {
+  font-size: 28px;
+  font-weight: 700;
 }
 
 .navbar .navbar-toggler {
@@ -490,10 +491,6 @@ input[type="number"] {
   margin: 40px 0;
 }
 
-.grid-item:nth-child(3) {
-  border-color: #ed7f5f;
-}
-
 .grid-item h2 {
   padding: 10px 15px;
   margin: 0;
@@ -508,8 +505,13 @@ input[type="number"] {
   padding-right: 10px;
 }
 
-#dtc {
-  background-color: #ed7f5f;
+.grid-item:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.daily-title:hover {
+  cursor: default;
 }
 
 .daily-text {
@@ -544,15 +546,6 @@ input[type="number"] {
 .daily-bottom-bar h3 {
   padding: 5px 10px;
   background-color: #ac0c89;
-}
-
-.grid-item:hover {
-  background-color: lightgray;
-  cursor: pointer;
-}
-
-.daily-title:hover {
-  cursor: default;
 }
 
 .sortimente-widget {
@@ -678,17 +671,6 @@ input[type="number"] {
   color: black;
 }
 
-.restaurante-item:hover img {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
-  -webkit-transition: all ease-in-out 0.3s;
-  transition: all ease-in-out 0.3s;
-  border-top-right-radius: 5px;
-  border-top-left-radius: 5px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .restaurante-item h2 {
   margin: 10px 0 -10px 0;
   font-size: 20px;
@@ -700,8 +682,15 @@ input[type="number"] {
   margin: 10px 0 0 0;
 }
 
-.fix {
-  width: 68%;
+.restaurante-item:hover img {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .socialize {
@@ -838,6 +827,7 @@ input[type="number"] {
 }
 
 #modal-open {
+  display: none;
   position: fixed;
   top: 50%;
   right: 0;
@@ -853,6 +843,7 @@ input[type="number"] {
           box-shadow: 0px 0px 10px 1px rgba(105, 104, 104, 0.849);
   cursor: pointer;
   outline: none;
+  z-index: 11;
 }
 
 #modal-open:hover {
@@ -950,6 +941,7 @@ input[type="number"] {
   font-weight: bold;
   border: 2px solid #df096d;
   border-radius: 50%;
+  background-color: #53515169;
 }
 
 .close-restaurant-modal:hover,
@@ -996,12 +988,6 @@ input[type="number"] {
   background-color: #e3e3e7;
 }
 
-.restaurant-title {
-  text-align: center;
-  display: block;
-  text-align: center;
-}
-
 .restaurant-info h1 {
   font-size: 30px;
 }
@@ -1009,6 +995,12 @@ input[type="number"] {
 .restaurant-info span {
   font-size: 20px;
   margin: 10px;
+}
+
+.restaurant-title {
+  text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .modal-detalii-container {
@@ -1207,6 +1199,7 @@ input[type="number"] {
 .food_price p {
   margin: 0 auto 5px auto;
   width: auto;
+  white-space: nowrap;
 }
 
 .modal-cos {
@@ -1249,6 +1242,10 @@ input[type="number"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 50px;
+}
+
+.modal-adress {
+  margin-bottom: 240px;
 }
 
 .modal-adress h3 {
@@ -1312,11 +1309,6 @@ input[type="number"] {
           user-select: none;
 }
 
-.textp p {
-  margin-top: 10px;
-  font-size: 20px;
-}
-
 .textp h1 {
   color: #b81767;
   -webkit-text-stroke-width: 1px;
@@ -1327,6 +1319,11 @@ input[type="number"] {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   border-bottom: 1px solid #8d7c7c;
+}
+
+.textp p {
+  margin-top: 10px;
+  font-size: 20px;
 }
 
 .wrapperr {
@@ -1354,15 +1351,22 @@ input[type="number"] {
   overflow: auto;
 }
 
+.gallery h4,
+.gallery img,
+.gallery p {
+  text-align: center;
+  color: #645e5e;
+  line-height: 20px;
+  width: 175px;
+  opacity: 0.7;
+}
+
 .gallery_about {
   border: 1px solid black;
   margin: 0 5px;
 }
 
-.gallery_about h3,
-.gallery h4,
-.gallery img,
-.gallery p {
+.gallery_about h3 {
   text-align: center;
   color: #645e5e;
   line-height: 20px;
@@ -1390,6 +1394,12 @@ input[type="number"] {
           justify-content: space-between;
 }
 
+.produse-cos p {
+  width: 100px;
+  margin: 0 0 0 5px;
+  padding-right: 15px;
+}
+
 .produs-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1406,12 +1416,6 @@ input[type="number"] {
   width: 30px;
 }
 
-.produse-cos p {
-  width: 100px;
-  margin: 0 0 0 5px;
-  padding-right: 15px;
-}
-
 .produs-cantitate {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1424,6 +1428,15 @@ input[type="number"] {
   width: auto;
 }
 
+.produs-cantitate > button {
+  background: #df096d;
+  border: 1px solid black;
+  font-size: 15px;
+  padding: 2px 5px;
+  width: 80px;
+  margin: 5px auto 0 auto;
+}
+
 .quantity-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1432,15 +1445,6 @@ input[type="number"] {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.produs-cantitate > button {
-  background: #df096d;
-  border: 1px solid black;
-  font-size: 15px;
-  padding: 2px 5px;
-  width: 80px;
-  margin: 5px auto 0 auto;
 }
 
 .item-info {
@@ -1480,10 +1484,13 @@ input[type="number"] {
     height: 80%;
     margin: 0 auto;
   }
-  .restaurante-item h2 {
+  .product-img h2 {
     margin: 5px 0 -10px 0;
     padding-top: 0px;
     font-size: 20px;
+  }
+  .navbar {
+    padding-left: 0;
   }
   .navbar ul {
     padding: 0 10px;
@@ -1491,9 +1498,6 @@ input[type="number"] {
   .navbar ul li a {
     min-width: 100px;
     padding: 0 20px;
-  }
-  .navbar {
-    padding-left: 0;
   }
   .modal-plata {
     margin: 0 10px;
@@ -1508,6 +1512,11 @@ input[type="number"] {
 
 /* Tablet */
 @media (max-width: 1150px) {
+  #modal-open {
+    display: block;
+    font-size: 20px;
+    padding: 15px 15px;
+  }
   .produs-cantitate > button {
     margin: 5px 0;
   }
@@ -1623,6 +1632,19 @@ input[type="number"] {
   .navbar {
     padding: 0;
   }
+  .navbar .navbar-toggler {
+    display: block;
+    position: absolute;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    outline: none;
+    padding: 0 5px;
+    cursor: pointer;
+  }
   .navbar ul {
     width: 100%;
     padding: 0;
@@ -1632,10 +1654,6 @@ input[type="number"] {
     overflow: hidden;
     -webkit-transition: all ease-in-out 0.3s;
     transition: all ease-in-out 0.3s;
-  }
-  .navbar ul.open {
-    max-height: 100vh;
-    z-index: 9;
   }
   .navbar ul li {
     width: 100%;
@@ -1650,18 +1668,8 @@ input[type="number"] {
     background-color: rgba(124, 121, 121, 0.9);
     color: #df096d;
   }
-  .navbar .navbar-toggler {
-    display: block;
-    position: absolute;
-    height: 40px;
-    top: 20px;
-    right: 20px;
-    background-color: transparent;
-    color: #fff;
-    border: 3px solid #fff;
-    outline: none;
-    padding: 0 5px;
-    cursor: pointer;
+  .navbar ul.open {
+    max-height: 100vh;
   }
   .navbar .navbar-toggler span,
   .navbar .navbar-toggler span::before,
@@ -1818,13 +1826,9 @@ input[type="number"] {
     float: none;
     width: 100%;
   }
-  #modal-open {
-    font-size: 20px;
-    padding: 15px 15px;
-  }
   .modal_container {
-    height: 90%;
-    padding: 100px 0 10px 0;
+    height: 100%;
+    padding: 50px 0 0 0;
     display: none;
   }
   .container {
@@ -1858,6 +1862,9 @@ input[type="number"] {
 }
 
 @media (max-height: 810px) and (max-width: 375px) {
+  .modal-detalii-container img {
+    height: auto;
+  }
   .modal-cos {
     margin-top: 30px;
     padding-bottom: 0;
@@ -1877,7 +1884,7 @@ input[type="number"] {
   .modal_container {
     height: 90%;
     overflow: scroll;
-    padding: 90px 0 10px 0;
+    padding: 50px 0 10px 0;
   }
   .modal-detalii {
     padding: 0;

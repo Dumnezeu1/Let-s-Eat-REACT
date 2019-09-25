@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [toggleNavbar, setToggleNavbar] = useState(false);
+
   let open = "";
   if (toggleNavbar === true) {
     open += "open";

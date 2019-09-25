@@ -19,8 +19,7 @@ export default function SortimentSelectBar({
                 setFindSortiment(category.name);
               }}
             >
-              {category.name === findSortiment ? "> " : ""}
-
+              {category.name === findSortiment ? ">" : ""}
               {category.name}
             </button>
           ))}
@@ -30,7 +29,7 @@ export default function SortimentSelectBar({
               setFindSortiment("");
             }}
           >
-            {findSortiment === "" ? "> " : ""}
+            {findSortiment === "" ? ">" : ""}
             All
           </button>
         </div>

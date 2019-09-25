@@ -27,11 +27,18 @@ function CartDisplay({ cart, setCart }) {
   }
 
   function Submit(e) {
+    const phoneCheck = isNaN(phone);
+
     if (cart.length === 0) {
       e.preventDefault();
       alert("Add something in cart");
     }
-    if (adress.trim().length > 0 && phone.trim().length > 0)
+    if (
+      adress.trim().length > 0 &&
+      phone.trim().length === 10 &&
+      cart.length > 0 &&
+      !phoneCheck
+    )
       alert("Order send");
   }
 

@@ -1,0 +1,318 @@
+{
+  "restaurants": [
+    {
+      "id": 0,
+      "name": "Barbeque",
+      "sortiments": "Gratar, grill, bauturi",
+      "image": "bbq.jpg",
+      "adress": "George Enescu, nr 1",
+      "company_data": "S.C. CITY'S FAME S.R.L. ",
+      "working_time": [
+        {
+          "day": "Luni-Vineri",
+          "open": "10:00-23:00"
+        },
+        {
+          "day": "Sambata-Duminica",
+          "open": "Inchis"
+        }
+      ],
+
+      "categories": [
+        {
+          "name": "Gratar",
+          "food": [
+            {
+              "name": "Mititei",
+              "description": "Mici cu mustar/ 2 buc si franzela/ 1 buc",
+              "price": 5
+            },
+            {
+              "name": "Carnaciori",
+              "description": "Carnaciori pe gratar/ 2 buc",
+              "price": 4
+            },
+            {
+              "name": "Paine",
+              "description": "Paine pe gratar",
+              "price": 2
+            }
+          ]
+        },
+        {
+          "name": "Garnituri",
+          "food": [
+            {
+              "name": "Cartofi pai",
+              "description": "Cartofi pai pe gratar/ 30 gr",
+              "price": 7
+            },
+            {
+              "name": "Salata",
+              "description": "Varza, rosii, carne/ 300gr",
+              "price": 10
+            }
+          ]
+        },
+        {
+          "name": "Sosuri",
+          "food": [
+            {
+              "name": "Sos dulce",
+              "description": "1 buc",
+              "price": 2
+            },
+            {
+              "name": "Sos picant",
+              "description": "1 buc",
+              "price": 2
+            },
+            {
+              "name": "Sos tzatziky",
+              "description": "1 buc",
+              "price": 2.5
+            }
+          ]
+        },
+        {
+          "name": "Sucuri",
+          "food": [
+            {
+              "name": "Coca-cola",
+              "description": "330 ml",
+              "price": 3.5
+            },
+            {
+              "name": "Fanta",
+              "description": "330 ml",
+              "price": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Brutaria-paine",
+      "sortiments": "Paine ",
+      "image": "brutaria.jpg",
+      "adress": "Brestei, nr 4",
+      "company_data": "S.C. Brutaria-paine S.R.L.",
+      "working_time": [
+        {
+          "day": "Luni-Vineri",
+          "open": "10:00-23:00"
+        },
+        {
+          "day": "Sambata-Duminica",
+          "open": "10:00-18:00"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Paine",
+          "food": [
+            {
+              "name": "Paine alba",
+              "description": "Faina, ulei de masline",
+              "price": 1.5
+            },
+            {
+              "name": "Paine neagra",
+              "description": "Faina, carbuni ",
+              "price": 2
+            },
+            {
+              "name": "Paine cu seminte",
+              "description": "Paine, seminte floarea soarelui",
+              "price": 5.99
+            }
+          ]
+        },
+        {
+          "name": "Produse patiserie",
+          "food": [
+            {
+              "name": "Cozonac",
+              "description": "Blat pufos, rahat, nuci, miere, ciocolata/  450 g",
+              "price": 23
+            },
+            {
+              "name": "Pateuri",
+              "description": "Pateu de gasca/ 1kg",
+              "price": 5
+            },
+            {
+              "name": "Placinta cu branza",
+              "description": "Placinta care are branza/ 20gr",
+              "price": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Restaurant chinezesc",
+      "sortiments": "Peste, sushi, taitei ",
+      "image": "japanese.jpg",
+      "adress": "Bulevardul Decebal, nr 4",
+      "company_data": "S.C. Bulevardul Decebal S.R.L. ",
+      "working_time": [
+        {
+          "day": "Luni-Vineri",
+          "open": "08:00-22:00"
+        },
+        {
+          "day": "Sambata-Duminica",
+          "open": "10:00-17:00"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Peste",
+          "food": [
+            {
+              "name": "Sushi somon regal",
+              "description": "350 gr",
+              "price": 55
+            },
+            {
+              "name": "Icre negre",
+              "description": "Icre de la un peste negru ",
+              "price": 70
+            },
+            {
+              "name": "Sushi de buget",
+              "description": "500",
+              "price": 30
+            },
+            {
+              "name": "Peste balon",
+              "description": "Peste otravitor si rar",
+              "price": 70
+            }
+          ]
+        },
+        {
+          "name": "Taitei",
+          "food": [
+            {
+              "name": "Taitei picanti",
+              "description": "200 g taitei, 1/2 varza alba, 1 ceapa, 1 ceasca de ulei, 1 lingura bulion de rosii, piper macinat/  450 g",
+              "price": 23
+            },
+            {
+              "name": "Taitei dulci",
+              "description": "200 g taitei, 1/2 varza alba, 1 ceasca de ulei, 1 lingura bulion de rosii/  450 g",
+              "price": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Restaurant italienesc",
+      "sortiments": "Paste, clatite, bauturi",
+      "image": "italian.jpg",
+      "adress": "Str fulger, nr 14",
+      "company_data": "S.C. Italienesc FAME S.R.L. ",
+      "working_time": [
+        {
+          "day": "Luni-Vineri",
+          "open": "10:30-21:00"
+        },
+        {
+          "day": "Sambata",
+          "open": "10:00-18:00"
+        },
+        {
+          "day": "Duminica",
+          "open": "Inchis"
+        }
+      ],
+      "categories": [
+        {
+          "name": "Paste",
+          "food": [
+            {
+              "name": "Paste italienesti ",
+              "description": "350 gr",
+              "price": 55
+            },
+            {
+              "name": "Paste cu ciocolata",
+              "description": "350 gr ",
+              "price": 70
+            },
+            {
+              "name": "Paste carbonara",
+              "description": "300 gr ",
+              "price": 20
+            },
+            {
+              "name": "Paste simple",
+              "description": "900 gr ",
+              "price": 30
+            }
+          ]
+        },
+        {
+          "name": "Clatite",
+          "food": [
+            {
+              "name": "Clatite cu gem de capsuni ",
+              "description": "3 buc",
+              "price": 10
+            },
+            {
+              "name": "Clatite cu gem de caise ",
+              "description": "3 buc",
+              "price": 11
+            },
+            {
+              "name": "Clatite cu nutella ",
+              "description": "3 buc",
+              "price": 15
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "name": "Support",
+      "info": "Support nu este"
+    },
+    {
+      "name": "Terms and Conditions",
+      "info": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
+    }
+  ],
+  "about": {
+    "bannerTitle": "Despre Let's Eat",
+    "bannerText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Remratione voluptate, quos assumenda deserunt inventore veniam, ipsam earum voluptates, similique possimus laboriosam? Obcaecati non esse laudantium aut veniam voluptatem laboriosam velit voluptatibus? Enim saepe eos esse beatae,ullam recusandae offici vitae rem aliquam fugiat in doloremque quibusdam nulla porro fuga.",
+    "employees": [
+      {
+        "avatar": "https://hips.hearstapps.com/esquireuk.cdnds.net/15/37/2048x2730/2048x2730-hannibal-lecters-style-secrets-43-jpg-30df48d8.jpg?resize=480:*",
+        "name": "Hannibal",
+        "position": "Cook",
+        "about": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellendus."
+      },
+      {
+        "avatar": "https://s2.r29static.com//bin/entry/982/720x864,85/1796850/image.webp",
+        "name": "Marcel",
+        "position": "Santa Claus",
+        "about": "Comes during winter"
+      },
+      {
+        "avatar": "https://vignette.wikia.nocookie.net/harrypotter/images/1/1c/Tomdh.jpg/revision/latest/scale-to-width-down/250?cb=20140902155751&path-prefix=tr",
+        "name": "Voldemort",
+        "position": "Searching for his nose",
+        "about": "Avada kedavra"
+      }
+    ]
+  }
+}
